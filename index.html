@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paula Flores</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ff4b5c, #e52e71);
+            color: #fff;
+            overflow: hidden;
+        }
+
+        /* Фон */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://github.com/OnlyFansfreetrial/paulaflovers/blob/main/image/Paula.JPG?raw=true') no-repeat center center/cover;
+            filter: brightness(0.5);
+            z-index: -1;
+            animation: zoomIn 10s infinite alternate;
+        }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Контейнер */
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+        .content h1 {
+            font-size: 4em;
+            margin-bottom: 30px;
+            color: #fff;
+            text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+            animation: slideInDown 1.5s ease-in-out;
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Основные кнопки */
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .btn {
+            position: relative;
+            padding: 20px 40px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #fff;
+            background: transparent;
+            border: 2px solid #fff;
+            border-radius: 50px;
+            text-decoration: none;
+            cursor: pointer;
+            overflow: hidden;
+            z-index: 1;
+            transition: all 0.4s ease;
+        }
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            z-index: 0;
+            transition: all 0.4s ease;
+        }
+        .btn:hover::before {
+            left: 0;
+        }
+
+        .btn.onlyfans {
+            border-color: #00a8ff;
+            box-shadow: 0 0 15px rgba(0, 168, 255, 0.5);
+        }
+        .btn.onlyfans:hover {
+            color: #00a8ff;
+            background: #fff;
+            transform: scale(1.1);
+        }
+
+        .btn.instagram {
+            border-color: #e1306c;
+            box-shadow: 0 0 15px rgba(225, 48, 108, 0.5);
+        }
+        .btn.instagram:hover {
+            color: #e1306c;
+            background: #fff;
+            transform: scale(1.1);
+        }
+
+        /* Рекламные баннеры */
+        .advert-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            opacity: 0;
+            animation: slideInBanner 1s ease-out forwards;
+        }
+
+        @keyframes slideInBanner {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .advert-btn {
+            padding: 20px 40px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #fff;
+            background: #ff4b5c;
+            border: 3px solid #ff4b5c;
+            border-radius: 20px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 0 20px rgba(255, 75, 92, 0.7);
+            text-align: center;
+        }
+        
+        .advert-btn:hover {
+            color: #ff4b5c;
+            background: #fff;
+            border-color: #ff4b5c;
+            transform: scale(1.1);
+        }
+        
+        .advert-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Адаптивный дизайн */
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 2.5em;
+            }
+            .btn, .advert-btn {
+                font-size: 1.1em;
+                padding: 15px 25px;
+            }
+        }
+        @media (max-width: 480px) {
+            .content h1 {
+                font-size: 2.2em;
+            }
+            .buttons {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .advert-buttons {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .btn, .advert-btn {
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="content">
+        <h1>Hi, I'm Sofia, your favorite hot kitty. 😍</h1>
+        <div class="buttons">
+            <a href="https://onlyfans.com/sofiaaaparker/c373" target="_blank" class="btn onlyfans">OnlyFans</a>
+            <a href="https://www.instagram.com/sofi_parkerx" target="_blank" class="btn instagram">Instagram</a>
+        </div>
+    </div>
+
+    <!-- Рекламные баннеры -->
+    <div class="advert-buttons">
+        <a href="https://freetrialonlyfans.shop/" target="_blank" class="advert-btn">Best Model</a>
+        <a href="https://suptop.top/click?o=2&a=3126" target="_blank" class="advert-btn">Find Milf</a>
+    </div>
+</body>
+</html>
